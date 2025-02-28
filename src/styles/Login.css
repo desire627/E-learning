@@ -65,7 +65,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9rem; /* Reduce button size */
+    font-size: 0.9rem; 
     font-weight: bold;
     transition: 0.3s;
   }
