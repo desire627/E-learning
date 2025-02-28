@@ -1,0 +1,113 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('../assets/log.jpg') no-repeat center center;
+    background-size: contain; /* Prevents over-zooming */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  .login-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 320px; /* Shrink width */
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 1.4rem; /* Slightly smaller */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    text-align: left;
+    font-size: 0.9rem; /* Shrink font size */
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px; /* Reduce padding */
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .forgot-password {
+    text-align: left;
+    font-size: 0.8rem; /* Shrink font size */
+    color: #6a0dad;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Reduce button size */
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background: #8a4de8;
+  }
+  
+  .signup-link {
+    text-align: left;
+    font-size: 0.8rem; /* Shrink font size */
+    margin-top: 8px;
+  }
+  
+  .signup-link a {
+    color: #6a0dad;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Prevent Scrolling */
+  body, html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .login-box {
+      width: 85%;
+      max-width: 280px; 
+      padding: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    input, button {
+      padding: 8px;
+      font-size: 0.8rem;
+    }
+  }
+  
