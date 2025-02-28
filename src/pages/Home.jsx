@@ -8,7 +8,7 @@ const Home = () => {
       <img src={illustration} alt="E-Learning Illustration" className="illustration" />
       <h1>Your own personal e-learning app</h1>
       <p>Learn new skills as you see yourself grow.</p>
-      <a href="/login" className="get-started-btn">Getting Started →</a>
+      <a href="#/login" className="get-started-btn">Getting Started →</a>
     </div>
   );
 };
