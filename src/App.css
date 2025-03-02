@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -41,25 +41,4 @@
   color: #888;
 }
 
-/* Adjust container for full responsiveness */
-.mobile-container {
-  width: 100%; /* Use full width instead of fixed 375px */
-  max-width: 375px; /* Still maintain a phone-like size */
-  height: 100vh; /* Full viewport height */
-  margin: auto; /* Ensure it's centered */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f8f9fa;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px; /* Prevents content from sticking to edges */
-  position: relative;
-}
 
-/* Ensure the content inside is also centered */
-.mobile-container > * {
-  max-width: 100%;
-  box-sizing: border-box;
-  text-align: center; /* Centers text content */
-}
