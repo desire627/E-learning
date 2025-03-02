@@ -1,0 +1,138 @@
+/* Full-screen layout */
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Dashboard Container */
+.student-dashboard-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.student-sidebar {
+    width: 250px;
+    background: #4b0082; /* Purple */
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.student-sidebar h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.student-sidebar nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.student-sidebar nav a:hover {
+    background: #6a0dad;
+}
+
+.student-sidebar nav a svg {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.student-main-content {
+    flex: 1;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icon {
+    font-size: 1rem;
+    color: #6a0dad;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-icon:hover {
+    color: #6a0dad;
+}
+
+
+.student-navbar {
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-navbar h2 {
+    color: #4b0082;
+    font-size: 18px;
+}
+
+.student-navbar .icons {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    color: #4b0082;
+}
+
+/* Dashboard Cards */
+.student-dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.student-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.student-card h3 {
+    font-size: 16px;
+    color: #4b0082;
+}
+
+.student-card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .student-dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .student-sidebar {
+        width: 200px;
+    }
+
+    .student-sidebar nav a {
+        font-size: 14px;
+    }
+}
