@@ -41,22 +41,25 @@
   color: #888;
 }
 
-/* Force the entire app to look like a phone screen */
+/* Adjust container for full responsiveness */
 .mobile-container {
-  width: 375px; /* Typical mobile width */
+  width: 100%; /* Use full width instead of fixed 375px */
+  max-width: 375px; /* Still maintain a phone-like size */
   height: 100vh; /* Full viewport height */
-  margin: 0 auto; /* Center on larger screens */
-  overflow: hidden;
+  margin: auto; /* Ensure it's centered */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa; /* Light background */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Mobile-like border effect */
+  background-color: #f8f9fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Prevents content from sticking to edges */
+  position: relative;
 }
 
-/* Ensure inner content fits within mobile layout */
-.mobile-container * {
+/* Ensure the content inside is also centered */
+.mobile-container > * {
   max-width: 100%;
   box-sizing: border-box;
+  text-align: center; /* Centers text content */
 }
