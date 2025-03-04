@@ -1,29 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { FaBell, FaUser, FaSearch, FaBook, FaChartBar, FaCheckCircle } from "react-icons/fa";
-import "../styles/StudentDashboard.css"; // Import CSS file
+import "../styles/StudentDashboard.css";
 
 const StudentDashboard = () => {
+  const [userRole, setUserRole] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const role = localStorage.getItem("role");
+    console.log("User Role from localStorage:", role);
+
+    if (!role) {
+      console.log("No role found, redirecting to login...");
+      navigate("/login", { replace: true });
+    } else if (role !== "student") {
+      console.log("Access Denied! Redirecting to home...");
+      alert("Access Denied! Only students can access this page.");
+      navigate("/", { replace: true });
+    } else {
+      setUserRole(role);
+    }
+  }, [navigate]);
+
+  if (userRole !== "student") return null; // Prevents rendering before role is verified
+
   return (
     <div className="student-dashboard-container">
       {/* Sidebar */}
       <aside className="student-sidebar">
         <h2 className="sidebar-title">Student Panel</h2>
         <nav className="sidebar-nav">
-          <a href="#" className="sidebar-link">
+          <Link to="/courses" className="sidebar-link">
             <FaBook className="sidebar-icon" /> <span>My Courses</span>
-          </a>
-          <a href="#" className="sidebar-link">
+          </Link>
+          <Link to="/progress" className="sidebar-link">
             <FaChartBar className="sidebar-icon" /> <span>Progress</span>
-          </a>
-          <a href="#" className="sidebar-link">
+          </Link>
+          <Link to="/completed" className="sidebar-link">
             <FaCheckCircle className="sidebar-icon" /> <span>Completed</span>
-          </a>
+          </Link>
         </nav>
       </aside>
 
       {/* Main Content */}
       <div className="student-main-content">
-        {/* Navbar */}
         <header className="student-navbar">
           <h2 className="navbar-title">Student Dashboard</h2>
           <div className="navbar-icons">
